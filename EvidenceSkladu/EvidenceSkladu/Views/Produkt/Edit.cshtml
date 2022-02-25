@@ -1,0 +1,34 @@
+﻿
+@model Produkt
+<form method="post"asp-action="Edit">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="">Editovat produkt</h2>
+            <hr />
+             </div>
+             
+            <div class="mb-3">
+                <label asp-for="Nazev">Název</label>
+                <input asp-for="Nazev"class="form-control"/>
+                <span asp-validation-for="Nazev"class="text-danger"></span>
+
+            </div>
+             <div class="mb-3">
+                <label asp-for="PocetProduktu">Počet produktů na skladě</label>
+                <input asp-for="PocetProduktu"class="form-control"/>
+                <span asp-validation-for="PocetProduktu"class="text-danger"></span>
+
+            </div>
+            <button type="submit"class="btn btn-primary" style="width:250px"> Editovat produkt</button>
+            <a asp-controller="Produkt"asp-action="Index"class="btn btn-secondary" style="width:250px"> Zpět do skladových zásob
+        </a>
+
+    </div>
+
+</form>
+@section Scripts{
+@{
+<partial name="_ValidationScriptsPartial" />
+}
+}
+
